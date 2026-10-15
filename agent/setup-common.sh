@@ -33,11 +33,16 @@ install_claude_code() {
   if command -v claude >/dev/null 2>&1; then
     return
   fi
-  echo "Installing Claude Code..."
-  if [ "${CLAUDE_INSTALL_METHOD:-native}" = "npm" ]; then
+  echo "Installing Claude Code with the official installer..."
+  if curl -fsSL https://claude.ai/install.sh | bash; then
+    return
+  fi
+  # Fallback only if the official installer fails and npm is available.
+  if command -v npm >/dev/null 2>&1; then
+    echo "Official installer failed; trying npm..."
     npm install -g @anthropic-ai/claude-code
   else
-    curl -fsSL https://claude.ai/install.sh | bash
+    echo "Claude Code could not be installed. Run: curl -fsSL https://claude.ai/install.sh | bash"
   fi
 }
 

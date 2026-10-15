@@ -17,8 +17,8 @@ fi
 SOURCE_DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT="${1:-$HOME/Modding}"
 SHELL_RC="$HOME/.bashrc"
-# The native installer does not support Termux; Claude Code is installed with npm.
-CLAUDE_INSTALL_METHOD="npm"
+# Claude Code is installed with the official curl installer (skipped if already
+# installed); npm is only a fallback if that fails.
 
 # shellcheck source=setup-common.sh
 . "$SOURCE_DIR/setup-common.sh"
@@ -26,7 +26,7 @@ CLAUDE_INSTALL_METHOD="npm"
 if [ "${INSTALL_TOOLS:-0}" = "1" ]; then
   echo "Installing tools with pkg..."
   pkg update -y
-  pkg install -y git python nodejs-lts ffmpeg curl
+  pkg install -y git python ffmpeg curl
   # uv is in the Termux repos; fall back to pip if it isn't available.
   pkg install -y uv || pip install uv
   install_claude_code

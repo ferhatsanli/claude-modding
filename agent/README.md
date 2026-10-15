@@ -94,7 +94,8 @@ bash setup-android.sh ~/storage/shared/Modding
 ```
 
 Termux'un kendi paket yöneticisi (`pkg`) ve depoları olduğu için ayrı bir betiği var.
-Claude Code burada `npm` ile kurulur.
+Claude Code zaten kuruluysa atlanır; değilse resmi `curl` kurulumu kullanılır (npm sadece o
+başarısız olursa yedek).
 
 ### Kurulumdan sonra (her platform)
 
