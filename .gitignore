@@ -1,0 +1,16 @@
+# Game files, ROMs, saves and outputs never go into this repo.
+agent/games/*
+!agent/games/README.md
+*.gba
+*.gb
+*.gbc
+*.nds
+*.iso
+*.zip
+*.7z
+*.sav
+*.ss[0-9]
+*.esp
+*.esm
+*.bsa
+*.ba2

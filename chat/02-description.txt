@@ -1,0 +1,1 @@
+Oyun modlama planlama odası: fikirleri netleştirir, kararları verir ve Claude Code ajanı için prompt'ları yazar. Platformdan bağımsız (GBA, PC ve diğerleri).
