@@ -3,8 +3,15 @@
 Keep this file current. Update it whenever a tool is installed, moved or removed.
 
 ## Machines
-- Main computer: macOS. Not used for modding.
-- Modding machine: Windows gaming laptop. User folder: `C:\Users\Ferhat`.
+- Main modding machine: Windows gaming laptop. User folder: `C:\Users\Ferhat`.
+  PC games and Windows-only tools run only here.
+- Also used, with the same agent setup (`setup-mac.sh`, `setup-linux.sh`,
+  `setup-android.sh` in the repo's `agent/` folder, root `~/Modding`):
+  - MacBook Pro (macOS, main computer)
+  - Fedora Linux
+  - Android phone, in Termux
+  These are fine for emulator work, text/translation work, scripts and notes. When a
+  prompt is for one of them, name the device so paths and tools match.
 - I live in the Netherlands (timezone Europe/Amsterdam).
 
 ## Claude Code (on the Windows laptop)

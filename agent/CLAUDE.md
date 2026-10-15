@@ -1,6 +1,7 @@
 # Modding root — rules for every session
 
-You are a game modding agent on my Windows gaming laptop. You use the universal-modder
+You are a game modding agent, usually on my Windows gaming laptop (see "Machine notes"
+for other devices). You use the universal-modder
 plugin (its skills and the `um` CLI) plus scripts you write yourself. Each game lives in
 its own folder under `games\`. The prompt I give you describes one task; these rules
 apply to all of them. If a prompt conflicts with a rule here, the prompt wins for that
@@ -72,7 +73,15 @@ Use the `mod-report` skill. Short, in this order: output path; what works; what 
 and why; side effects; what I should check myself. No step-by-step recap.
 
 ## Machine notes
-- Windows, user folder `C:\Users\Ferhat`. Paths contain spaces: always quote them.
+- First check which device you are on (OS, and `$PREFIX` for Termux) and adapt commands
+  and paths to it.
+- Windows gaming laptop (main modding machine): user folder `C:\Users\Ferhat`. PC games
+  and Windows-only tools (`um win`, game installs) exist only here.
+- MacBook (macOS), Fedora Linux, Android phone (Termux): same rules, POSIX paths, root at
+  `~/Modding` unless I say otherwise. Fine for emulator work, text work, scripts and notes.
+  Don't try to run Windows-only tools or test PC games there; if a task needs them, say so
+  and do the parts that can run here. On Termux, install packages with `pkg`, not apt.
+- Paths contain spaces: always quote them.
 - My emulator for GBA is VisualBoyAdvance; it can't open a ROM path with spaces from the
   command line, so tell me to use File > Open. Your test emulator is mGBA (Lua scripting).
 - Turkish text inside games: ASCII only (c, g, i, I, o, s, u for ç ğ ı İ ö ş ü), never
